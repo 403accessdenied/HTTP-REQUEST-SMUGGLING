@@ -72,9 +72,8 @@ Content-Type: text/html
 Content-Length: 22
 Connection: keep-alive
 
-Successfully accessed my secret!
+successfully accessed my secret!
 ```
-
 
 
 
