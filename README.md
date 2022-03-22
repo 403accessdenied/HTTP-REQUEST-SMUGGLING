@@ -92,13 +92,15 @@ Host: attackerhost
 
 
 ```
-[image]
+![burp-request](https://user-images.githubusercontent.com/102154743/159484273-a962578a-20dd-49dc-ae9f-149858056af6.png)
 
-5. when you send the request we will get below response
-[image]
+5. When you send the request we will get below response
+
+![burp-response](https://user-images.githubusercontent.com/102154743/159484278-26507134-1681-4b01-a847-70d2d825045c.png)
 
 6.Repeat the process untill we will get two response from server as below
-[image]
+
+![burp-request-response](https://user-images.githubusercontent.com/102154743/159484277-b26b8f41-635a-4dc1-9fa7-c6ee287dc5c8.png)
 
 
 #	Reference
