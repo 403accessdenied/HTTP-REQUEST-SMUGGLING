@@ -1,4 +1,7 @@
-#	HTTP REQUEST SMUGGLING 
+#                                         HTTP REQUEST SMUGGLING
+#                        Donthamsetti Bala Murali Krishna (2148927) & Max Bateman (2042317) @Swansea.ac.uk
+                       
+#	HTTP REQUEST SMUGGLING:
 The term HTTP request smuggling (HRS) refers to techniques that interfere with the way in which a website processes sequences of HTTP requests. 
 
 Request smuggling vulnerabilities are considered critical because they allow threat actors to bypass security controls. The actor then gain unauthorized access to sensitive information and directly compromise other users
