@@ -88,7 +88,7 @@ GET / HTTP/1.1
 Host: 127.0.0.1:9095
 Content-Length: 56
 
-GET /_hidden/index.html HTTP/1.1
+GET /sensitive/index.html HTTP/1.1
 Host: attackerhost
 
 
