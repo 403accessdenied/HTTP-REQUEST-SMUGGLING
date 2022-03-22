@@ -34,7 +34,7 @@ Enjoy!
 
 
 
-###	reproduce
+###	
 
 ```bash
 printf 'GET /a HTTP/1.1\r\n'\
