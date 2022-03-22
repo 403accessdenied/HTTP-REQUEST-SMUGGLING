@@ -106,7 +106,56 @@ Host: attackerhost
 
 ![burp-desync](https://user-images.githubusercontent.com/102154743/159486724-71df79ac-94ca-4ec8-a011-2e3967092bac.png)
 
+# Patch
+```
+NGINX supports the ability to have the error_page handler change the resulting error page and error code
+into a 302 redirect, as such:
+error_page 401 https://example.org/;
+Other forms of the error_page handler are NOT vulnerable:
+error_page 404 /404.html;
+error_page 404 @404;
+```
+# vulnerable configaration in *default.conf*
+```bash
+server {
+ listen 80;
+ server_name localhost;
+ error_page 401 http://example.org;
+ location / {
+ return 401;
+ }
+}
+server {
+ listen 80;
+ server_name attackerhost;
+ location /sesitive/index.html {
+ return 200 'successfully accessed my secret';
+ }
+}
+```
 
+# Patch for above configaration 
+```
+server {
+ listen 80;
+ server_name localhost;
+ error_page 401 @401;
+ location / {
+ return 401;
+ }
+ location @401 {
+ return 302 http://example.org;
+ }
+}
+
+server {
+ listen 80;
+ server_name attackerhost;
+ location /sesitive/index.html {
+ return 200 'successfully accessed my secret';
+ }
+}
+```
 #	Reference
 
 https://bertjwregeer.keybase.pub/2019-12-10%20-%20error_page%20request%20smuggling.pdf
