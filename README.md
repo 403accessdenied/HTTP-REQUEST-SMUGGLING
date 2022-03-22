@@ -72,16 +72,9 @@ Content-Type: text/html
 Content-Length: 22
 Connection: keep-alive
 
-This should be hidden!
+Successfully accessed my secret!
 ```
 
-
-
-#	Openresty[CVE-2020-11724]
-
-[OpenResty](https://github.com/openresty/openresty) is a full-fledged web application server by bundling the standard nginx core, lots of 3rd-party nginx modules, as well as most of their external dependencies.
-
-OpenResty includes Nginx as a component and does include its own nginx core patches. So it is affected by CVE-2019-20372. And its configuration is the same as the nginx. POC is also the same.
 
 
 
