@@ -92,15 +92,14 @@ Host: attackerhost
 
 
 ```
-![burp-request](https://user-images.githubusercontent.com/102154743/159484273-a962578a-20dd-49dc-ae9f-149858056af6.png)
+![burp-request](https://user-images.githubusercontent.com/102154743/159486728-f7605d05-6724-4500-a091-fbe670f90402.png)
 
 5. When you send the request we will get below response
+![burp-response](https://user-images.githubusercontent.com/102154743/159486730-227653af-d594-450f-87a3-c6c0cda04c61.png)
 
-![burp-response](https://user-images.githubusercontent.com/102154743/159484278-26507134-1681-4b01-a847-70d2d825045c.png)
+6.Repeat the process untill we will get **Two response from server** as below
 
-6.Repeat the process untill we will get two response from server as below
-
-![burp-request-response](https://user-images.githubusercontent.com/102154743/159484277-b26b8f41-635a-4dc1-9fa7-c6ee287dc5c8.png)
+![burp-desync](https://user-images.githubusercontent.com/102154743/159486724-71df79ac-94ca-4ec8-a011-2e3967092bac.png)
 
 
 #	Reference
