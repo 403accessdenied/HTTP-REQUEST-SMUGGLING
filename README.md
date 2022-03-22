@@ -115,7 +115,7 @@ Other forms of the error_page handler are NOT vulnerable:
 error_page 404 /404.html;
 error_page 404 @404;
 ```
-# vulnerable configaration in *default.conf*
+### vulnerable configaration in *default.conf*
 ```bash
 server {
  listen 80;
@@ -134,7 +134,7 @@ server {
 }
 ```
 
-# Patch for above configaration 
+### Patch for above configaration 
 ```
 server {
  listen 80;
